@@ -1,4 +1,4 @@
-package br.com.sgsc.api;
+package br.com.sgsc.api.areacomum;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

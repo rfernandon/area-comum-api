@@ -1,4 +1,4 @@
-package br.com.sgsc;
+package br.com.sgsc.api.areacomum;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
