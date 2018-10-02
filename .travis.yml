@@ -11,7 +11,7 @@ services:
 addons:
   postgresql: "9.4"
   sonarcloud:
-    organization: "rfernandon"
+    organization: "rfernandon-github"
     token:
       secure: "${SONAR_TOKEN}"
 
@@ -21,7 +21,3 @@ before_script:
 
 script:
   - sonar-scanner
-
-cache:
-  directories:
-    - "$HOME/.sonar/cache"
