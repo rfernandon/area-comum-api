@@ -14,16 +14,18 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
 
+import br.com.sgsc.api.areacomum.annotation.LocalTimeRange;
 import br.com.sgsc.api.areacomum.emuns.Situacao;
 
 /**
- * Classe usada para representar o JASON dos dados da "AreaComum".
+ * Classe usada para representar o JSON dos dados da "AreaComum".
  * 
  * @author rfernandon
  * @since 01/10/2018
  * @version 1.0.0
  */
 @JsonRootName(value = "areaComum")
+@LocalTimeRange(start="horaAbertura", end="horaEncerramento")
 public class JsonAreaComum implements Serializable {
 
 	/**
