@@ -10,7 +10,7 @@
 	<packaging>jar</packaging>
 
 	<name>area-comum-api</name>
-	<description>Projeto desenvolvido para disponibilizar os servicos do SGSC</description>
+	<description>API desenvolvida para prover os servicos referentes as areas comum do SGSC</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
