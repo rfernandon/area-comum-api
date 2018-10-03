@@ -11,6 +11,17 @@
 
 	<name>area-comum-api</name>
 	<description>API desenvolvida para prover os servicos referentes as areas comum do SGSC</description>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		
+		<sonar.links.homepage>https://github.com/rfernandon/area-comum-api</sonar.links.homepage>
+		<sonar.links.ci>https://travis-ci.org/rfernandon/area-comum-api</sonar.links.ci>
+		<sonar.links.scm>https://github.com/rfernandon/area-comum-api</sonar.links.scm>
+		<sonar.links.issue>https://github.com/rfernandon/area-comum-api/issues</sonar.links.issue>
+	</properties>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -18,12 +29,6 @@
 		<version>2.0.5.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
-	</properties>
 
 	<dependencies>
 		<dependency>
