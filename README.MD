@@ -1,4 +1,8 @@
 [![Build Status](https://travis-ci.org/rfernandon/area-comum-api.svg?branch=master)](https://travis-ci.org/rfernandon/area-comum-api)
 
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=br.com.sgsc%3Aarea-comum-api&metric=alert_status)](https://sonarcloud.io/dashboard/index/project=br.com.sgsc%3Aarea-comum-api)
+
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=br.com.sgsc%3Aarea-comum-api&metric==coverage)](https://next.sonarqube.com/sonarqube/component_measures/domain/Coverage?id=br.com.sgsc%3Aarea-comum-api)
+
 # area-comum-api
 API desenvolvida para prover os servicos referentes as áreas comum do SGSC
