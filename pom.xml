@@ -17,6 +17,8 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		
+		<!-- O scanner do sonarqube usando Maven ignora o arquivo sonar-project.properties -->
+		<!-- Para passar parâmetros de análise ao usar o scanner do sonarqube usando Maven, é necessário definir como <properties> -->
 		<sonar.links.homepage>https://github.com/rfernandon/area-comum-api</sonar.links.homepage>
 		<sonar.links.ci>https://travis-ci.org/rfernandon/area-comum-api</sonar.links.ci>
 		<sonar.links.scm>https://github.com/rfernandon/area-comum-api</sonar.links.scm>
