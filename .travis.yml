@@ -19,14 +19,16 @@ before_script:
   - psql -c "CREATE USER sgsc WITH PASSWORD 'sgsg';" -U postgres
 jobs:
   include:
-    - stage: "Limpando, build, test e publicando no Sonarqube"
-      name: "..."
-      # The following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-      script: mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
-    - stage: "Deploy heroku"
+    - stage: "Build"
+      name: "Executando o build da aplicação junto com os testes"
+      script: mvn clean install
+    - stage: "Quality Gate"
+      name: "Publicando as métricas no SonarCloud"
+      script: mvn org.jacoco:jacoco-maven-plugin:prepare-agent sonar:sonar
+    - stage: "Deploy"
+      name: "Publicando o artefato no Heroku"
       deploy:
         provider: heroku
         api_key:
           secure: "${HEROKU_TOKEN}"
-        # By default, we will try to deploy to an application by the same name as the repository. You can explicitly set the name via the app option:
         app: area-comum-api
