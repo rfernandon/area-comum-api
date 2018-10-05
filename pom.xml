@@ -11,14 +11,15 @@
 
 	<name>area-comum-api</name>
 	<description>API desenvolvida para prover os servicos referentes as areas comum do SGSC</description>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		
+
 		<!-- O scanner do sonarqube usando Maven ignora o arquivo sonar-project.properties -->
-		<!-- Para passar parâmetros de análise ao usar o scanner do sonarqube usando Maven, é necessário definir como <properties> -->
+		<!-- Para passar parâmetros de análise ao usar o scanner do sonarqube usando 
+			Maven, é necessário definir como <properties> -->
 		<sonar.links.homepage>https://github.com/rfernandon/area-comum-api</sonar.links.homepage>
 		<sonar.links.ci>https://travis-ci.org/rfernandon/area-comum-api</sonar.links.ci>
 		<sonar.links.scm>https://github.com/rfernandon/area-comum-api</sonar.links.scm>
@@ -41,6 +42,13 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!-- O contêiner de servlet incorporado padrão para o Spring Boot Starter Web é o tomcat. -->
+		<!-- Para ativar o suporte para JSPs, precisaríamos adicionar uma dependência no tomcat-embed-jasper. -->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
