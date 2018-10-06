@@ -28,6 +28,7 @@ jobs:
     - stage: "Deploy"
       name: "Publicando o artefato no Heroku"
       if: branch = master
+      script: skip
       deploy:
         provider: heroku
         skip_cleanup: true # Don't re-run the tests
