@@ -27,8 +27,10 @@ jobs:
       script: mvn org.jacoco:jacoco-maven-plugin:prepare-agent sonar:sonar
     - stage: "Deploy"
       name: "Publicando o artefato no Heroku"
+      if: branch = master
       deploy:
         provider: heroku
+        skip_cleanup: true # Don't re-run the tests
         api_key:
           secure: "${HEROKU_TOKEN}"
         app: area-comum-api
