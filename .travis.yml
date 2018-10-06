@@ -22,16 +22,20 @@ jobs:
     - stage: "Build"
       name: "Executando o build da aplicação junto com os testes"
       script: mvn clean install
+      
+    - stage: "Checando a cobertura"
+      name: "Executando o build da aplicação junto com os testes"
+      script: mvn clean cobertura:check sonar:sonar
+      
     - stage: "Quality Gate"
       name: "Publicando as métricas no SonarCloud"
       script: mvn org.jacoco:jacoco-maven-plugin:prepare-agent sonar:sonar
     - stage: "Deploy"
       name: "Publicando o artefato no Heroku"
       if: branch = master
-      script: skip
+      script: skip # usually you do not want to rerun any tests
       deploy:
         provider: heroku
-        skip_cleanup: true # Don't re-run the tests
         api_key:
           secure: "${HEROKU_TOKEN}"
         app: area-comum-api
