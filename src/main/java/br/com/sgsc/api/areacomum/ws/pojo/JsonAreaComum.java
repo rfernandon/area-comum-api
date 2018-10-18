@@ -3,6 +3,7 @@ package br.com.sgsc.api.areacomum.ws.pojo;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.List;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -16,6 +17,7 @@ import com.fasterxml.jackson.annotation.JsonRootName;
 
 import br.com.sgsc.api.areacomum.annotation.LocalTimeRange;
 import br.com.sgsc.api.areacomum.emuns.Situacao;
+import br.com.sgsc.api.areacomum.entity.AreaComum;
 
 /**
  * Classe usada para representar o JSON dos dados da "AreaComum".
@@ -191,5 +193,15 @@ public class JsonAreaComum implements Serializable {
 	 */
 	public void setSituacao(Situacao situacao) {
 		this.situacao = situacao;
+	}
+
+	public static JsonAreaComum valueOf(AreaComum areaComum) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	public static List<JsonAreaComum> valueOf(List<AreaComum> areasComum) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

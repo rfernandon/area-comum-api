@@ -12,6 +12,8 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -63,6 +65,10 @@ public class AreaComum implements Serializable {
 	@Column(nullable=true)
 	@Enumerated(EnumType.STRING)
 	private Situacao situacao;
+	
+	@ManyToOne
+	@JoinColumn(name="condominio_id")
+	private Condominio condominio;
 	
 	/**
 	 * @return the areaComumId
