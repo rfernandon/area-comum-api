@@ -23,13 +23,13 @@ jobs:
       name: "Executando o build da aplicação junto com os testes"
       script: mvn clean install
       
-    - stage: "Checando a cobertura"
-      name: "Executando o build da aplicação junto com os testes"
-      script: mvn clean cobertura:check sonar:sonar
+#    - stage: "Checando a cobertura"
+#      name: "Executando o build da aplicação junto com os testes"
+#      script: mvn clean cobertura:check sonar:sonar
       
-#    - stage: "Quality Gate"
-#      name: "Publicando as métricas no SonarCloud"
-#      script: mvn org.jacoco:jacoco-maven-plugin:prepare-agent sonar:sonar
+    - stage: "Quality Gate"
+      name: "Publicando as métricas no SonarCloud"
+      script: mvn org.jacoco:jacoco-maven-plugin:prepare-agent sonar:sonar
       
     - stage: "Deploy"
       name: "Publicando o artefato no Heroku"
